@@ -5,7 +5,7 @@ module OkHealthCheck
     isolate_namespace OkHealthCheck
 
     config.after_initialize do |app|
-      if OkHealthCheck.modunt_at
+      if OkHealthCheck.mount_at
         app.routes.prepend do
           get 'healthcheck', to: 'healthcheck#show'
         end
