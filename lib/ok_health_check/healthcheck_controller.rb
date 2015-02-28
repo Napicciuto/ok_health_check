@@ -1,4 +1,4 @@
-class HealthcheckController < ActionController::Base
+class HealthcheckController
   def show
     render plain: "OK"
   end

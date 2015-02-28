@@ -1,5 +1,6 @@
 require "ok_health_check/version"
+require "ok_health_check/engine"
 
 module OkHealthCheck
-  autoload :HealthcheckController, 'ok_health_check/healthcheck_controller'
+  require 'ok_health_check/healthcheck_controller'
 end
