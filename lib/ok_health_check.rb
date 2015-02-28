@@ -1,9 +1,5 @@
 require "ok_health_check/version"
 
 module OkHealthCheck
- class HealthcheckController < ActionController::Base
-    def show
-      render plain: "OK"
-    end
-  end
+  autoload :HealthcheckController, 'ok_health_check/healthcheck_controller'
 end
