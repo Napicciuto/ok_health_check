@@ -1,6 +1,6 @@
 # OkHealthCheck
 
-TODO: Write a gem description
+This gem provides a Rack app that responds to any request with a 200 status code and the text "OK". We suggest you mount it so it responds to requests from "/healthcheck" - in fact, if you use Rails, we do that for you.
 
 ## Installation
 
@@ -20,7 +20,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Rails
+Nothing to do here. Rails will automatically include a route `/healthcheck` that will return `OK` when requested.
+
+If you want it to listen on some other endpoint, just add the following to your `config/routes.rb` file:
+
+```ruby
+mount OkHealthCheck.new, at: "/<desired endpoint>"
+```
+
+### Other Rack Apps (Sinatra, etc.)
+
+```ruby
+require 'ok_health_check'
+
+run Rack::URLMap.new \
+  "/" => <Your app class>,
+  "/healthcheck" => OkHealthCheck.new
+ ```
 
 ## Contributing
 
