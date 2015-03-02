@@ -1,6 +1,6 @@
 require "ok_health_check/version"
-require "ok_health_check/engine"
+require "ok_health_check/server"
+require "ok_health_check/railtie" if defined?(Rails)
 
 module OkHealthCheck
-  require 'ok_health_check/healthcheck_controller'
 end
