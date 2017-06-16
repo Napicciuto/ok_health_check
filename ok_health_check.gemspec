@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "ok_health_check"
   spec.version       = OkHealthCheck::VERSION
   spec.authors       = ["Nick Picciuto"]
-  spec.email         = ["napicciuto@gmail.com"]
+  spec.email         = ["support@verypossible.com"]
   spec.summary       = %q{Site health check}
   spec.description   = %q{A simple gem to check the health of a site}
-  spec.homepage      = "https://github.com/spartansystems/ok_health_check"
+  spec.homepage      = "https://github.com/verypossible/ok_health_check"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
